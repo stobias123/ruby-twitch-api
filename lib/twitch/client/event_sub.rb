@@ -7,6 +7,9 @@ module Twitch
       def get_event_sub(options = {})
         initialize_response EventSub, get('eventsub/subscriptions', options)
       end
+      def delete_event_sub(options = {})
+        initialize_response EventSub, delete('eventsub/subscriptions', options)
+      end
     end
   end
 end
