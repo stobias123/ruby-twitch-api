@@ -116,7 +116,7 @@ module Twitch
       Response.new(data_class, http_response: http_response)
     end
 
-    %w[get post put].each do |http_method|
+    %w[get post put delete].each do |http_method|
       define_method http_method do |resource, params|
         http_response = CONNECTION.public_send http_method, resource, params
 
