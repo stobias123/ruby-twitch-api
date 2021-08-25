@@ -21,7 +21,7 @@ module Twitch
       end
 
       def get_stream(stream_id)
-        initialize_response Stream, get("streams/#{stream_id}", {}])
+        initialize_response Stream, get("streams/#{stream_id}", {})
       end
 
       ## TODO: Can't find this method in documentation, test it
