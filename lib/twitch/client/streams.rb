@@ -20,6 +20,10 @@ module Twitch
         initialize_response Stream, get('streams', options)
       end
 
+      def get_stream(stream_id)
+        initialize_response Stream, get("streams/#{stream_id}", {}])
+      end
+
       ## TODO: Can't find this method in documentation, test it
       def get_streams_metadata(options = {})
         initialize_response StreamMetadata, get('streams/metadata', options)
